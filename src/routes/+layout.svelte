@@ -62,6 +62,8 @@
 				<li><a href="/chat">Chat</a></li>
 				<li><a href="/media">Media</a></li>
 				<li><a href="/projects">Projects</a></li>
+				<li><a href="/files">Files</a></li>
+
 			</ul>
 		</nav>
 		<!-- --- -->
