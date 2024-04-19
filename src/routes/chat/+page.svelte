@@ -51,62 +51,7 @@
 	// 		timestamp: 'Yesterday @ 2:30pm',
 	// 		message: lorem,
 	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		host: false,
-	// 		avatar: 14,
-	// 		name: 'Michael',
-	// 		timestamp: 'Yesterday @ 2:45pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		host: true,
-	// 		avatar: 48,
-	// 		name: 'Jane',
-	// 		timestamp: 'Yesterday @ 2:50pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		host: false,
-	// 		avatar: 14,
-	// 		name: 'Michael',
-	// 		timestamp: 'Yesterday @ 2:52pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		host: false,
-	// 		avatar: 14,
-	// 		name: 'Michael',
-	// 		timestamp: 'Yesterday @ 2:52pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		host: false,
-	// 		avatar: 14,
-	// 		name: 'Michael',
-	// 		timestamp: 'Yesterday @ 2:52pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		host: false,
-	// 		avatar: 14,
-	// 		name: 'Michael',
-	// 		timestamp: 'Yesterday @ 2:52pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	}
-	// ];
+	// 	}]
 	let currentMessage = '';
 
 	// For some reason, eslint thinks ScrollBehavior is undefined...
@@ -130,6 +75,7 @@
 			color: 'variant-soft-primary'
 		};
 		sendMessage("userId","userName",currentMessage);
+		// console.log("Chat;",chat);
 		// Update the message feed
 		messageFeed = [...messageFeed, newMessage];
 		// Clear prompt
