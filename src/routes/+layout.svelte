@@ -57,7 +57,6 @@
 			<ul class="text-1xl">
 				<li><a href="/">Home</a></li>
 				<li><a href="/guide">Guide</a></li>
-
 				<li><a href="/clubs">Clubs</a></li>
 				<li><a href="/events">Events</li>
 				<li><a href="/chat">Chat</a></li>

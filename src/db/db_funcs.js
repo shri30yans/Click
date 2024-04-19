@@ -60,31 +60,6 @@ export const sendMessage = async (userId,username, message) => {
 
 
 // @ts-ignore
-export const createClub = async (name,tagline,events,avatar) => {
-  // @ts-ignore
-  const { data, error } = await supabase
-    .from(tableName)
-    .insert([{name,tagline,events,avatar}])
-
-  if (error) {
-    console.error('Error creating club:', error);
-    throw error;
-  }
-}
-
-// @ts-ignore
-export const getAllClubs = async () => {
-  const { data, error } = await supabase
-    .from('clubs')
-    .select('*')
-
-  if (error) {
-    console.error('Error getting clubs:', error);
-    throw error;
-  }
-  return data;
-}
-
 
 
 // // Add username and timestamp when it was created.
