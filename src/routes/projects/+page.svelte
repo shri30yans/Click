@@ -24,8 +24,8 @@
     onMount(fetchProjects);
 
 </script>
-    <h1 class="text-3xl font-bold">Projects</h1>
-  <button class="button align-right mt-4 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createproject')}">+</button>
+    <h1 class="text-3xl ml-5 font-bold">Projects</h1>
+  <button class="button ml-5 mt-4 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createproject')}">+</button>
 
     <div class="w-full-10 text-token grid grid-cols-4 md:grid-cols-4 gap-10 m-10">
     {#each event_data as item (item.id)}

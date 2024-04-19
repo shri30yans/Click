@@ -6,6 +6,8 @@
 	import {sendMessage, chat} from '../../db/db_funcs';
 	import {onMount} from 'svelte';
 	import { supabase } from '$lib/supabaseClient.js';
+	import { goto } from '$app/navigation';
+
 
 	let messageFeed: MessageFeed[] = [];
 	// let messageFeed = chat; 
@@ -37,23 +39,9 @@
 	const channels: Person[] = [
 		{ id: 0, avatar: 14, name: 'General' },
 		{ id: 1, avatar: 40, name: 'Channel1' },
-		{ id: 2, avatar: 31, name: 'Channel2' },
-		// { id: 3, avatar: 56, name: 'Channel3' },
-		// { id: 4, avatar: 24, name: 'Channel4' },
+		{ id: 2, avatar: 31, name: 'Channel2' }
 	];
 	let currentPersonId: number = 0;
-
-	// Messages
-	// let messageFeed: MessageFeed[] = [
-	// 	{
-	// 		id: 0,
-	// 		host: true,
-	// 		avatar: 48,
-	// 		name: 'Jane',
-	// 		timestamp: 'Yesterday @ 2:30pm',
-	// 		message: lorem,
-	// 		color: 'variant-soft-primary'
-	// 	}]
 	let currentMessage = '';
 
 	// For some reason, eslint thinks ScrollBehavior is undefined...
@@ -66,20 +54,18 @@
 		return new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 	}
 
-	function addMessage(): void {
-		const newMessage = {
-			id: messageFeed.length,
-			host: true,
-			avatar: 48,
-			name: 'Shriyans',
-			timestamp: `Today @ ${getCurrentTimestamp()}`,
-			message: currentMessage,
-			color: 'variant-soft-primary'
-		};
-		sendMessage("userId","userName",currentMessage);
+	async function addMessage(): Promise<void> {		
+		const { data: { user } } = await supabase.auth.getUser()
+		if (!user) {
+			// No user is logged in, redirect to the login page
+			goto('/login');
+			return;
+		}
+		sendMessage(user.email,user.email,currentMessage);
 		// console.log("Chat;",chat);
 		// Update the message feed
-		messageFeed = [...messageFeed, newMessage];
+		//ts-ignore
+		// messageFeed = [...messageFeed, { ...newMessage, name: user.email || '' }];
 		// Clear prompt
 		currentMessage = '';
 		// Smooth scroll to bottom
@@ -140,30 +126,18 @@
 				<div class="lg:grid grid-row-[1fr_auto] h-full">
 					<!-- Conversation -->
 					<section bind:this={elemChat} class="h-[80vh] p-4 overflow-y-auto space-y-4">
-						{#each messageFeed as bubble}
-							{#if bubble.host === true}
+						<!-- {#each messageFeed as bubble} -->
+						{#each $chat as {created_at, id, username, message}, key}
 								<div class="grid grid-cols-[auto_1fr] gap-2">
-									<Avatar src="https://i.pravatar.cc/?img={bubble.avatar}" width="w-12" />
+									<Avatar src="https://i.pravatar.cc/?img={1}" width="w-12" />
 									<div class="card p-4 variant-soft rounded-tl-none space-y-2">
 										<header class="flex justify-between items-center">
-											<p class="font-bold">{bubble.name}</p>
-											<small class="opacity-50">{bubble.timestamp}</small>
+											<p class="font-bold">{username}</p>
+											<small class="opacity-50">{created_at}</small>
 										</header>
-										<p>{bubble.message}</p>
+										<p>{message}</p>
 									</div>
 								</div>
-							{:else}
-								<div class="grid grid-cols-[1fr_auto] gap-2">
-									<div class="card p-4 rounded-tr-none space-y-2 {bubble.color}">
-										<header class="flex justify-between items-center">
-											<p class="font-bold">{bubble.name}</p>
-											<small class="opacity-50">{bubble.timestamp}</small>
-										</header>
-										<p>{bubble.message}</p>
-									</div>
-									<Avatar src="https://i.pravatar.cc/?img={bubble.avatar}" width="w-12" />
-								</div>
-							{/if}
 						{/each}
 					</section>
 					<!-- Prompt -->

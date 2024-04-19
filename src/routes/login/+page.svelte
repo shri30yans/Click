@@ -10,8 +10,30 @@
 	let regEmail = '';
 	let regPassword = '';
 	let regSRN= '';
+	let regUsername= '';
 	let registerError = ''; 
 	let loginError = ''; 
+
+
+	// @ts-ignore
+	// async function saveDetails(username, srn) {
+	// 	const {data: {user}} = supabase.auth.getUser();
+	// 	console.log("function called",user)
+	// 	if (user) {
+	// 		const { data, error } = await supabase
+	// 		.from('public.users')
+	// 		.update({ username: username , srn: srn})
+	// 		.eq('id', user.id);
+
+	// 		if (error) {
+	// 		console.error('Error updating user:', error);
+	// 		} else {
+	// 		console.log('User updated:', data);
+	// 		}
+	// 	} else {
+	// 		console.error('Not authenticated');
+	// 	}
+	// }
 
 	async function handleRegister() {
 		// @ts-ignore
@@ -25,10 +47,20 @@
 			email: regEmail,
 			password: regPassword,
 		})
+		// saveDetails(regUsername,regSRN)
+			// .then(() => {
+			// 	console.log('Username saved');
+			// })
+			// .catch(error => {
+			// 	console.error('Error:', error);
+			// });
+
 		if (error) {
 			registerError = error.message; // Store the error message
 			console.log(error.message)
 		}
+		
+			
 	}
 
 	async function handleLogin() {
@@ -49,7 +81,7 @@
 		}
 		else {
 			console.log("Login successful");
-			console.log(data);
+			// console.log(data);
 			// Redirect to home page
 			goto('/');
 
@@ -95,6 +127,10 @@
 				<span class="label">Email</span>
 				<input class="input mt-2" type="email" placeholder="Email" bind:value={regEmail} required />
 			</label>
+			<!-- <label class="block mb-4">
+				<span class="label">Username</span>
+				<input class="input mt-2" type="text" placeholder="Username" bind:value={regUsername} required/>
+			</label> -->
 			<label class="block mb-4">
 				<span class="label">SRN</span>
 				<input class="input mt-2" type="text" placeholder="SRN" bind:value={regSRN} required minlength="8" />

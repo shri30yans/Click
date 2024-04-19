@@ -8,9 +8,9 @@
     let event_data: any[] = [];
     // console.log("Club:",event_data);
     
-    async function fetchEvents() {
+    async function fetchPosts() {
         const { data, error } = await supabase
-            .from('events')
+            .from('posts')
             .select('*');
         
         if (error) {
@@ -21,14 +21,13 @@
         }
     }
 
-    onMount(fetchEvents);
+    onMount(fetchPosts);
 
 </script>
-<h1 class="text-3xl ml-5 font-bold">Events</h1>
+    <h1 class="text-3xl ml-5 font-bold">Posts</h1>
+    <button class="button ml-5 mt-4 mr-50 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createpost')}">+</button>
 
-  <button class="button ml-5 mt-4 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createevent')}">+</button>
-
-    <div class="w-full-10 text-token grid grid-cols-4 md:grid-cols-4 gap-10 m-10">
+    <div class="w-full-10 text-token grid grid-cols-1 md:grid-cols-1 gap-10 m-10">
     {#each event_data as item (item.id)}
     <a class="card card-hover overflow-hidden" href="/elements/cards">
         <header>
@@ -36,9 +35,9 @@
         </header>
         <div class="p-4 space-y-4">
         <h6 class="h6" data-toc-ignore>{item.name}</h6>
-        <h3 class="h3" data-toc-ignore>{item.tagline}</h3>
+        <h3 class="h3" data-toc-ignore>{item.content}</h3>
         <article>
-            <p>{item.tagline}</p>
+            <p>{item.content}</p>
         </article>
         </div>
         <hr class="opacity-50" />

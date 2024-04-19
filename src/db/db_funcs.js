@@ -14,10 +14,10 @@ let tableName = 'global_chat'
 export const loadChat = async () => {
   // @ts-ignore
   // @ts-ignore
-  const { data, error } = await supabase.from(tableName).select().order('id', { ascending: false }).limit(initChatCount)
+  const { data, error } = await supabase.from(tableName).select().order('id', { ascending: false }).limit(5)
   // @ts-ignore
   chat.set(data.reverse())
-  console.log('Chat loaded',chat);
+  // console.log('Chat loaded',chat);
 
   // @ts-ignore
   const mySubscription = supabase
@@ -31,17 +31,6 @@ export const loadChat = async () => {
     .subscribe()
   }
 
-export const loadMore = async () => {
-  console.log("load more called")
-  // @ts-ignore
-  const { data, error } = await supabase
-    .from(tableName)
-    .select()
-    .order('id', { ascending: false })
-    .limit((initChatCount += 5))
-  // @ts-ignore
-  chat.set(data.reverse())
-}
 
 // @ts-ignore
 export const sendMessage = async (userId,username, message) => {

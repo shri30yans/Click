@@ -1,5 +1,5 @@
 <div class= "m-10">
-<h1 class="text-3xl" ><b> WELCOME TO PES: Your Campus Compass! </b></h1>
+<h1 class="h1 text-3xl" ><b> WELCOME TO PES: Your Campus Compass! </b></h1>
 <br>
 <p >Step into the world of PES with confidence! Whether you're a fresh face or a returning student, this guide is your trusted companion for mastering every aspect of campus life. From finding your way around to discovering hidden gems, we've got you covered. Stay tuned as we unveil a wealth of information, insider tips, and essential resources to ensure you thrive during your time here. Let the adventure begin!</p>
 <br>
@@ -30,19 +30,19 @@
 	</ul>
 </nav>
 <br>
-<h1 class="bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> CLUBS </h1>
+<h1 class="h1 bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> CLUBS </h1>
 <p>Explore a myriad of clubs across both campuses of PES, designed to foster student growth and learning. From academic pursuits to extracurricular interests, our diverse array of clubs offers something for everyone. For further details, visit the Clubs tab to uncover opportunities for personal development and enriching experiences.</p>
 <br>
-<h1 class="bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> SCHOLARSHIPS </h1>
+<h1 class="h1 bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> SCHOLARSHIPS </h1>
 
 <p>Unlock the door to academic excellence with our prestigious scholarship offerings at PES. Students in the top 25% of their class earn the coveted CNR scholarship, while the cream of the crop, the top 5%, are awarded the esteemed MRD scholarship. Additionally, those achieving a CGPA above 7.75 receive the Distinction scholarship, valued at Rs. 1000. 
 These scholarships not only recognize outstanding achievement but also serve as a testament to our commitment to fostering academic brilliance.</p>
 <br>
-<h1 class="bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> THE PRN & SRN </h1>
+<h1 class="h1 bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> THE PRN & SRN </h1>
 <p>The PRN format is PESxyyyyzzzzz, where x is your campus code (1 is RR, 2 is EC), yyyy is the year of admission, and zzzzz is a unique number. <br>Examples: PES1202212345.<br>
     The SRN format is PESxzzyyccnnn, where x is campus code, zz specifies your general qualification (UG for undergraduate), yy for year of admission, cc is course code (CS, EC, EE, AM, ME etc) and nn is a unique number. <br>Example: PES2UG22EC123. </p>
 <br>
-<h1 class="bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> 
+<h1 class="h1 bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> 
     Exciting Course Content: Igniting Your Academic Journey! </h1>
 <br>
 <div>Get ready to embark on a journey of academic excellence with our newly updated course content at PES. Designed to meet the demands of today's dynamic world, our curriculum offers a comprehensive blend of theory and practical applications. Here's what you can expect:
