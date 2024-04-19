@@ -23,65 +23,6 @@
 
     onMount(fetchEvents);
 
-//     let event_data:any[] = [
-// {
-//     "id": 1,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Event 1",
-//     "subtitle": "Tagline 1",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Alex",
-//     "date": "2022-01-01T00:00:00Z"
-// },
-// {
-//     "id": 2,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Event 2",
-//     "subtitle": "Tagline 2",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Bob",
-//     "date": "2022-02-01T00:00:00Z"
-// },
-// {
-//     "id": 3,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Event 3",
-//     "subtitle": "Tagline 3",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Charlie",
-//     "date": "2022-03-01T00:00:00Z"
-// },
-// {
-//     "id": 4,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Event 4",
-//     "subtitle": "Tagline 4",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Charlie",
-//     "date": "2022-03-01T00:00:00Z"
-// },
-// {
-//     "id": 5,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Event 4",
-//     "subtitle": "Tagline 4",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Charlie",
-//     "date": "2022-03-01T00:00:00Z"
-// }
-// ]
-
-//     onMount(async () => {
-//         const response = await fetch('/path/to/your/json/file.json');
-//         event_data = await response.json();
-//   });
-
-
 </script>
   <button class="button align-right mt-4 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createevent')}">+</button>
 

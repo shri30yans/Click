@@ -3,10 +3,12 @@
 
 <script lang="ts">  
 	// Messaging
-	import {sendMessage} from '../../db/db_funcs';
+	import {sendMessage, chat} from '../../db/db_funcs';
 	import {onMount} from 'svelte';
-  
+	import { supabase } from '$lib/supabaseClient.js';
+
 	let messageFeed: MessageFeed[] = [];
+	// let messageFeed = chat; 
 
 	// Chat
 	import { AppShell} from '@skeletonlabs/skeleton';
@@ -36,8 +38,8 @@
 		{ id: 0, avatar: 14, name: 'General' },
 		{ id: 1, avatar: 40, name: 'Channel1' },
 		{ id: 2, avatar: 31, name: 'Channel2' },
-		{ id: 3, avatar: 56, name: 'Channel3' },
-		{ id: 4, avatar: 24, name: 'Channel4' },
+		// { id: 3, avatar: 56, name: 'Channel3' },
+		// { id: 4, avatar: 24, name: 'Channel4' },
 	];
 	let currentPersonId: number = 0;
 
