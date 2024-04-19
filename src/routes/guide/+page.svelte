@@ -1,3 +1,4 @@
+<div class= "m-10">
 <h1 class="text-3xl" ><b> WELCOME TO PES: Your Campus Compass! </b></h1>
 <br>
 <p >Step into the world of PES with confidence! Whether you're a fresh face or a returning student, this guide is your trusted companion for mastering every aspect of campus life. From finding your way around to discovering hidden gems, we've got you covered. Stay tuned as we unveil a wealth of information, insider tips, and essential resources to ensure you thrive during your time here. Let the adventure begin!</p>
@@ -52,3 +53,4 @@ These scholarships not only recognize outstanding achievement but also serve as 
    <b> Engaging Learning Environment: </b>Experience dynamic classrooms where interactive discussions, group activities, and multimedia resources foster active engagement and collaboration among peers and instructors.
     Prepare to thrive in an environment where learning knows no bounds. Welcome to a world of endless possibilities at PES!</div>
 
+</div>
