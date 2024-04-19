@@ -1,5 +1,7 @@
 <script>
 	import { supabase } from '$lib/supabaseClient.js';
+    import { goto } from '$app/navigation';
+
 	
 	// @ts-ignore
 	let registerForm, loginForm;
@@ -49,7 +51,8 @@
 			console.log("Login successful");
 			console.log(data);
 			// Redirect to home page
-			// window.location.href = "/";
+			goto('/');
+
 		}
 	}
 

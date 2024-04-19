@@ -7,9 +7,9 @@
     import { supabase } from '../lib/supabaseClient';
 
     onMount(async () => {
-        const user = supabase.auth.getUser();
-
-        if (!user) {
+		const {data: {user}} = await supabase.auth.getUser();
+        //console.log('User:',user);
+		if (!user) {
             // No user is logged in, redirect to the login page
             goto('/login');
         }

@@ -2,7 +2,10 @@
 <script lang="ts">
     import { Avatar, CodeBlock } from '@skeletonlabs/skeleton';
     import { onMount } from 'svelte';
+    import { getAllClubs,createClub } from '../../db/db_funcs';
+    import { goto } from '$app/navigation';
     // let club_data: any[] = [];
+
     let club_data:any[] = [
   {
     "id": 1,
@@ -35,9 +38,12 @@
 //         club_data = await response.json();
 //   });
 
+
 </script>
+  <button class="button align-right mt-4 bg-gray-600 hover:bg-gray-900 text-white font-bold py-2 px-4" on:click="{() => goto('/createclub')}">+</button>
+
     <div class="w-full-10 text-token grid grid-cols-4 md:grid-cols-4 gap-10 m-10">
-    {#each club_data as item (item.id)}
+    <!-- {#each club_data as item (item.id)}
     <a class="card card-hover overflow-hidden" href="/elements/cards">
         <header>
         <img src={item.image} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
@@ -51,6 +57,6 @@
         </div>
         <hr class="opacity-50" />
     </a>
-{/each}
+{/each} -->
    
 </div>
