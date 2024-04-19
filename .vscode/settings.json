@@ -116,5 +116,8 @@
 		"transition",
 		"width",
 		"zIndex"
-	]
+	],
+	"files.associations": {
+		"unistd.h": "c"
+	}
 }
