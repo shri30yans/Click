@@ -5,40 +5,33 @@
     import { getAllClubs,createClub } from '../../db/db_funcs';
     import { goto } from '$app/navigation';
     // let club_data: any[] = [];
-    let club_data = getAllClubs();
-    // console.log("Club:",club_data);
-//     let club_data:any[] = [
-//   {
-//     "id": 1,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Announcement 1",
-//     "subtitle": "Subtitle 1",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Alex",
-//     "date": "2022-01-01T00:00:00Z"
-//   },
-//   {
-//     "id": 2,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Announcement 2",
-//     "subtitle": "Subtitle 2",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Bob",
-//     "date": "2022-02-01T00:00:00Z"
-//   },
-//   {
-//     "id": 3,
-//     "image": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "title": "Announcement 3",
-//     "subtitle": "Subtitle 3",
-//     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore",
-//     "avatar": "https://img.lovepik.com/element/45006/8218.png_860.png",
-//     "author": "Charlie",
-//     "date": "2022-03-01T00:00:00Z"
-//   }
-// ]
+
+    let club_data:any[] = [
+  {
+    "id": 1,
+    "image": "https://th.bing.com/th/id/OIP.G1Ku5bhbw_sidIS5_pCHswHaHa?rs=1&pid=ImgDetMain",
+    "title": "TECH CLUB",
+    "subtitle": "HSP!",
+    "content":"Step into the world of HSP, the premier tech club igniting innovation. Dive into the latest trends and advancements in technology, from AI to cybersecurity. Join us in shaping the future through hands-on projects, workshops, and networking opportunities. Let's explore the limitless possibilities of technology together!",
+   
+  },
+  {
+    "id": 2,
+    "image": "https://th.bing.com/th/id/R.50f48c5f9453dc04fcf69384ebdb6781?rik=2nCupy6n4w%2bPsw&riu=http%3a%2f%2fwww.tvt.fr%2fvar%2ftvt%2fstorage%2fimages%2fmedia%2fimages%2factualites%2flogo_weal.png%2f149956-1-fre-FR%2flogo_weal.png_bloc_line.png&ehk=xd6r3lrkdbb0thOFjVi%2bAgroecTn%2f0WBMtC1B7sHjxU%3d&risl=&pid=ImgRaw&r=0",
+    "title": "HEALTH-TECH CLUB",
+    "subtitle": "WEAL",
+    "content":"Join Weal, our health-tech club pioneering innovation in healthcare. Explore the latest advancements and solutions, from wearables to telemedicine platforms, to drive positive change. Revolutionize healthcare with us through innovation and collaboration!",
+    
+  },
+  {
+    "id": 3,
+    "image": "https://i.pinimg.com/originals/01/19/de/0119deba21831077fd4e21e3d6020e88.jpg",
+    "title": "Empowering Communities, Preserving Nature",
+    "subtitle": " H.E.L.P. CLUB",
+    "content":"Welcome to Help Club, where we empower communities and raise awareness for nature preservation. Join us in our mission to make a difference through community service projects and environmental initiatives. Together, let's create a brighter future for both people and the planet!",
+   
+  }
+]
 
 //     onMount(async () => {
 //         const response = await fetch('/path/to/your/json/file.json');
@@ -63,13 +56,6 @@
         </article>
         </div>
         <hr class="opacity-50" />
-        <footer class="p-4 flex justify-start items-center space-x-4">
-        <Avatar src={item.avatar} width="w-8" />
-        <div class="flex-auto flex justify-between items-center">
-            <h6 class="font-bold" data-toc-ignore>By {item.author}</h6>
-            <small>On {new Date(item.date).toLocaleDateString()}</small>
-        </div>
-        </footer>
     </a>
 {/each} -->
    
