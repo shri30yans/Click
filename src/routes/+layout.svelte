@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar, AppRail } from '@skeletonlabs/skeleton';
-
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
     import { supabase } from '../lib/supabaseClient';
@@ -22,9 +22,11 @@
 		<!-- App Bar -->
 		<AppBar class ="h-20">
 			<svelte:fragment slot="lead">
-				<strong class="text-4xl uppercase">Click</strong>
+				<strong class="text-4xl uppercase bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone ">Click</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
+				<LightSwitch></LightSwitch>
+
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://github.com/shri30yans?tab=repositories"
@@ -61,7 +63,7 @@
 				<li><a href="/clubs">Clubs</a></li>
 				<li><a href="/events">Events</li>
 				<li><a href="/chat">Chat</a></li>
-				<!-- <li><a href="/media">Media</a></li> -->
+				<li><a href="/media">Media</a></li>
 				<li><a href="/projects">Projects</a></li>
 
 			</ul>

@@ -42,7 +42,3 @@ export const sendMessage = async (userId,username, message) => {
     throw error;
   }
 }
-
-
-
-

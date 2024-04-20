@@ -43,8 +43,8 @@ These scholarships not only recognize outstanding achievement but also serve as 
     The SRN format is PESxzzyyccnnn, where x is campus code, zz specifies your general qualification (UG for undergraduate), yy for year of admission, cc is course code (CS, EC, EE, AM, ME etc) and nn is a unique number. <br>Example: PES2UG22EC123. </p>
 <br>
 <h1 class="h1 bg-gradient-to-r from-blue-500" style="font-size: 1.2rem;"> 
-    >> Exciting Course Content: Igniting Your Academic Journey! </h1><br>
-<br>
+Exciting Course Content: Igniting Your Academic Journey! </h1>
+
 <div>Get ready to embark on a journey of academic excellence with our newly updated course content at PES. Designed to meet the demands of today's dynamic world, our curriculum offers a comprehensive blend of theory and practical applications. Here's what you can expect:
 
    <b> Cutting-Edge Curriculum:</b> Our courses are meticulously crafted to provide you with the latest knowledge and skills relevant to your field of study. Stay ahead of the curve with up-to-date content that reflects industry trends and advancements.<br>

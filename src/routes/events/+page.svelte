@@ -11,7 +11,8 @@
     async function fetchEvents() {
         const { data, error } = await supabase
             .from('events')
-            .select('*');
+            .select('*')
+            .order('date', { ascending: true });
         
         if (error) {
             console.error('Error fetching events:', error);
@@ -30,7 +31,8 @@
 
     <div class="w-full-10 text-token grid grid-cols-4 md:grid-cols-4 gap-10 m-10">
     {#each event_data as item (item.id)}
-    <a class="card card-hover overflow-hidden" href="/elements/cards">
+    <!-- <a class="card card-hover overflow-hidden" href="/eventexpand/?id={item.id}"> -->
+    <a class="card card-hover overflow-hidden" href="/events">
         <header>
         <img src={item.image_url} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
         </header>

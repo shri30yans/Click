@@ -1,6 +1,6 @@
 
 <div class="container mx-auto p-8 space-y-8">
-	<h1 class="h1">Welcome to Click!</h1>
+	<h1 class="text-4xl bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Welcome to Click!</h1>
 	<h3 class="h3">Your Alternative To:</h3>
 	<!-- <ul class="list">
 		<li>Reddit</li>
@@ -35,10 +35,10 @@
 			<span>Email</span>
 		</a>
 		<a class="logo-item" href="/">
-			<span>PESU Academy</span>
+			<span>Whaatsapp</span>
 		</a>
 		<a class="logo-item" href="/">
-			<span>PESU Forms</span>
+			<span>PESU Forums</span>
 		</a>
 		<a class="logo-item" href="/">
 			<span>Google Forms</span>
@@ -47,17 +47,27 @@
 	<!-- ... -->
 </div>
 
-	<h3 class ="h3">
-		-Features: Files, Forums, Communities, Events, Chat, Media, Projects Discussion, and more!
-	</h3>
-	<h3 class ="h3">
-		-Senior Guidance, Placement Information, Like-minded people, Projects, Club projects, 
-	</h3>
+	<ul>
+		<li>
+			<div>
+				<span class="text-xl badge bg-pink-500"></span>
+			Features: Files, Forums, Communities, Events, Chat, Media, Projects Discussion, and more!<br>
+			<span class="flex-auto"> </span>
+			</div>
+		</li>
+		<li>
+			<div>
+			<span class="badge bg-pink-500"></span>
+			Senior Guidance, Placement Information, Like-minded people, Projects, Club projects, 
+			<span class="flex-auto"></span>
+			</div>
+		</li>
+	</ul>
 	</div>
 	<style>
 		.logo-item {
 			/* Add gradient background */
-			background-image: linear-gradient(to right, #5aa1ff, #ff48cb);
+			background-image: linear-gradient(to right, #3c91ff, #ff48cb);
 			/* Add hover effect */
 			transition: background-color 0.3s ease;
 			border-radius: 8px; /* Optional: Add rounded corners */

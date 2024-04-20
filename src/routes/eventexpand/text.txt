@@ -1,0 +1,46 @@
+<!-- <script context="module">
+// @ts-nocheck
+
+    import { supabase } from '$lib/supabaseClient.js';
+    // @ts-ignore
+    export async function load({ query }) {
+      const id = query.get('id');
+      console.log("ID",id);
+      const { data, error } = await supabase
+        .from('items')
+        .select('*')
+        .eq('id', id)
+        .single();
+  
+      if (error) {
+        console.error('Error fetching item:', error);
+        return { status: 500, error };
+      } else {
+        console.log("DATA",data);
+        return { props: { item: data } };
+      }
+    }
+</script>
+
+<script>
+    // @ts-ignore
+    export let item;
+  </script>
+  
+
+
+<div>
+<h6 class="h6" data-toc-ignore>{item.name}</h6>
+<h3 class="h3" data-toc-ignore>{item.tagline}</h3>
+<article>
+    <p>{item.tagline}</p>
+</article>
+</div>
+<hr class="opacity-50" />
+<footer class="p-4 flex justify-start items-center space-x-4">
+<!-- <Avatar src={item.avatar} width="w-8" /> -->
+<div class="flex-auto flex justify-between items-center">
+    <h6 class="font-bold" data-toc-ignore>By {item.host}</h6>
+    <small>On {new Date(item.date).toLocaleDateString()}</small>
+</div>
+</footer> -->

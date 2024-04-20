@@ -6,12 +6,12 @@
 
 
     let event_data: any[] = [];
-    // console.log("Club:",event_data);
     
     async function fetchPosts() {
         const { data, error } = await supabase
             .from('posts')
-            .select('*');
+            .select('*')
+            .order('created_at', { ascending: false });
         
         if (error) {
             console.error('Error fetching events:', error);
@@ -29,7 +29,7 @@
 
     <div class="w-full-10 text-token grid grid-cols-1 md:grid-cols-1 gap-10 m-10">
     {#each event_data as item (item.id)}
-    <a class="card card-hover overflow-hidden" href="/elements/cards">
+    <a class="card card-hover overflow-hidden" href="/">
         <header>
         <img src={item.image_url} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
         </header>

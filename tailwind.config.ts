@@ -22,6 +22,10 @@ export default {
 						name: 'wintry',
 						enhancements: true,
 					},
+					{
+						name: 'modern',
+						enhancements: true,
+					},
 				],
 			},
 		}),
