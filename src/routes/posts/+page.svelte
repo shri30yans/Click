@@ -34,17 +34,14 @@
         <img src={item.image_url} class="bg-black/50 w-full aspect-[21/9]" alt="Post" />
         </header>
         <div class="p-4 space-y-4">
-        <h6 class="h6" data-toc-ignore>{item.name}</h6>
-        <h3 class="h3" data-toc-ignore>{item.content}</h3>
-        <article>
-            <p>{item.content}</p>
-        </article>
+        <h3 class="h3" data-toc-ignore>{item.name}</h3>
+        <h5 class = "h5">{item.content}</h5>
         </div>
         <hr class="opacity-50" />
         <footer class="p-4 flex justify-start items-center space-x-4">
         <!-- <Avatar src={item.avatar} width="w-8" /> -->
         <div class="flex-auto flex justify-between items-center">
-            <h6 class="font-bold" data-toc-ignore>By {item.host}</h6>
+            <h6 class="font-bold" data-toc-ignore>By {item.author}</h6>
             <small>On {new Date(item.date).toLocaleDateString()}</small>
         </div>
         </footer>

@@ -57,7 +57,7 @@
 	<style>
 		.logo-item {
 			/* Add gradient background */
-			background-image: linear-gradient(to right, #d62828, #f77f00);
+			background-image: linear-gradient(to right, #5aa1ff, #ff48cb);
 			/* Add hover effect */
 			transition: background-color 0.3s ease;
 			border-radius: 8px; /* Optional: Add rounded corners */

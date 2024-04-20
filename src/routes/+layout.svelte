@@ -61,8 +61,9 @@
 				<li><a href="/clubs">Clubs</a></li>
 				<li><a href="/events">Events</li>
 				<li><a href="/chat">Chat</a></li>
-				<li><a href="/media">Media</a></li>
+				<!-- <li><a href="/media">Media</a></li> -->
 				<li><a href="/projects">Projects</a></li>
+
 			</ul>
 		</nav>
 		<!-- --- -->

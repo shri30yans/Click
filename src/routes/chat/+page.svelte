@@ -3,14 +3,11 @@
 
 <script lang="ts">  
 	// Messaging
-	import {sendMessage, chat} from '../../db/db_funcs';
+	import {sendMessage, chat,loadChat} from '../../db/db_funcs';
 	import {onMount} from 'svelte';
 	import { supabase } from '$lib/supabaseClient.js';
 	import { goto } from '$app/navigation';
-
-
-	let messageFeed: MessageFeed[] = [];
-	// let messageFeed = chat; 
+	const avatar_id = 2; // Generate a random number between 0 and 49
 
 	// Chat
 	import { AppShell} from '@skeletonlabs/skeleton';
@@ -21,15 +18,6 @@
 		id: number;
 		avatar: number;
 		name: string;
-	}
-	interface MessageFeed {
-		id: number;
-		host: boolean;
-		avatar: number;
-		name: string;
-		timestamp: string;
-		message: string;
-		color: string;
 	}
 
 	let elemChat: HTMLElement;
@@ -61,12 +49,9 @@
 			goto('/login');
 			return;
 		}
+		await loadChat();
+
 		sendMessage(user.email,user.email,currentMessage);
-		// console.log("Chat;",chat);
-		// Update the message feed
-		//ts-ignore
-		// messageFeed = [...messageFeed, { ...newMessage, name: user.email || '' }];
-		// Clear prompt
 		currentMessage = '';
 		// Smooth scroll to bottom
 		// Timeout prevents race condition
@@ -85,7 +70,9 @@
 	// When DOM mounted, scroll to bottom
 	onMount(() => {
 		scrollChatBottom();
+		loadChat();
 	});
+	
 </script>
 
 
@@ -128,8 +115,9 @@
 					<section bind:this={elemChat} class="h-[80vh] p-4 overflow-y-auto space-y-4">
 						<!-- {#each messageFeed as bubble} -->
 						{#each $chat as {created_at, id, username, message}, key}
+							{#key key}
 								<div class="grid grid-cols-[auto_1fr] gap-2">
-									<Avatar src="https://i.pravatar.cc/?img={1}" width="w-12" />
+									<Avatar src="https://i.pravatar.cc/?img={avatar_id}" width="w-12" />
 									<div class="card p-4 variant-soft rounded-tl-none space-y-2">
 										<header class="flex justify-between items-center">
 											<p class="font-bold">{username}</p>
@@ -138,6 +126,7 @@
 										<p>{message}</p>
 									</div>
 								</div>
+							{/key}
 						{/each}
 					</section>
 					<!-- Prompt -->
