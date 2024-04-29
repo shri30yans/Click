@@ -1,4 +1,5 @@
-# Click: A Unified College Social Media & Collaboration Platform
+# Click
+## A Unified College Social Media & Collaboration Platform
 
 **Click** empowers college students to connect, share knowledge, and thrive in their academic and extracurricular journeys. It seamlessly integrates essential features typically found across disparate platforms like Reddit, Instagram, WhatsApp, and Google Forms, offering a convenient and centralized solution.
 
