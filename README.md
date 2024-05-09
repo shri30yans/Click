@@ -3,7 +3,7 @@
 
 **Click** empowers college students to connect, share knowledge, and thrive in their academic and extracurricular journeys. It seamlessly integrates essential features typically found across disparate platforms like Reddit, Instagram, WhatsApp, and Google Forms, offering a convenient and centralized solution.
 
-This project was created for the [Ingenius hackathon 2024](https://www.instagram.com/ingeniushackathon/) where Click was shortlisted as one of the top 11 teams out of 56 participating teams.
+This project was created for the [Ingenius hackathon 2024](https://www.instagram.com/ingeniushackathon/) where Click was shortlisted as one of the top 11 teams out of 56 participating teams and even recieved a special mention.
 
 ## Key Features:
 
@@ -27,7 +27,7 @@ Click eliminates the need to juggle multiple platforms for different college nee
 
 This readme file serves as a comprehensive overview of Click's envisioned features. We are actively developing the platform and welcome contributions from the community. We'll provide detailed instructions on installation, usage, and contribution guidelines upon project launch.
 
-## Technology Stack (Placeholder):
+## Technology Stack:
 
 - **Front-end**: SvelteKit, Skeleton
 - **Back-end**: SupaBase
