@@ -10,22 +10,34 @@ This project was created for the [Ingenius hackathon 2024](https://www.instagram
 - **Streamlined Communication:**
   - **Posts:** Reach a wide audience and spark discussions on topics relevant to college life. Unlike text-based platforms where messages can get buried, Click's post structure ensures greater visibility.
   - **Real-time Chat:** Engage in instant conversations with classmates, group members, or mentors.
-- **Collaborative Project Management:**\
+- **Collaborative Project Management:**
 Showcase ongoing projects, connect with like-minded individuals, and collaborate on larger initiatives. Click fosters collaboration and fosters innovation.
-- **Comprehensive Club Information:**\
-  Discover and explore active clubs on campus. Gain access to detailed descriptions, contact information, and events, streamlining club involvement.
-- **College Life Resources:**\
+- **College Life Resources:**
   Access valuable information for first-year students, including insights into college events, GPA management, and attendance tracking. Click empowers freshmen to navigate college with ease.
-- **Event Management:**\
+- **Event Management:**
    Stay up-to-date on upcoming campus events. Easily register and participate with streamlined registration processes.       Click simplifies event discovery and participation.
+- **Comprehensive Club Information:**
+  Discover and explore active clubs on campus. Gain access to detailed descriptions, contact information, and events, streamlining club involvement.
 
-## Click Unifies the College Experience:
+## Unifying the College Experience:
 
 Click eliminates the need to juggle multiple platforms for different college needs. From sharing notes and discussing coursework to finding a study buddy, joining a club, or registering for an event, Click provides a one-stop shop for a fulfilling college experience.
 
-## Getting Started (Future Development Plans):
+## Future Development Plans:
+- [ ] LLM to search, filter and sumarize projects, people, clubs, etc
+- [ ] AI edited posts for content enrichment and improved readibility.
+- [ ] AI Content filters/ Spam detection
+- [ ] Summarization of large posts
+- [ ] Chatbot for FAQ's
+- [ ] Tailored recommendation for Internships, Clubs, Jobs and Projects.
+- [ ] Constant updates on all notable events in college to stay upto date.
+- [ ] Threads for detailed discussion of specific projects or questions.
+- [ ] Create direct interaction between students, college management and student council.
+- [ ] Event check-in using QR Codes/Facial Recognition
+- [ ] Suggestions towards similiar previously asked questions
+- [ ] Anonymous mode
+- [ ] Reserving recreational facilities beforehand
 
-This readme file serves as a comprehensive overview of Click's envisioned features. We are actively developing the platform and welcome contributions from the community. We'll provide detailed instructions on installation, usage, and contribution guidelines upon project launch.
 
 ## Technology Stack:
 
